@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+    <property name="acs-oauth-secret-production" type="string">ZcRx2OGudAiLJlfOOwO1mBEUUeHBEXGt</property>
+    <property name="acs-oauth-key-production" type="string">xChGzR9K0tNLX1dLUNUBglHL8OMtr6lt</property>
+    <property name="acs-api-key-production" type="string">hyGnKRXsKlZpwRwu78J3i8sP1v52er7C</property>
+    <property name="acs-oauth-secret-development" type="string">BCdwsut9xYNJoO1MQkab58OTeCZHE1TG</property>
+    <property name="acs-oauth-key-development" type="string">4I0cn8uzQ0FdGN1y1gLQeF81bgUTO0W5</property>
+    <property name="acs-api-key-development" type="string">CCIcVvKvtQePTlaiD5lcP0gfDtg3nUHD</property>
+    <deployment-targets>
+        <target device="mobileweb">false</target>
+        <target device="iphone">true</target>
+        <target device="ipad">false</target>
+        <target device="android">true</target>
+        <target device="blackberry">false</target>
+    </deployment-targets>
+    <sdk-version>2.1.3.GA</sdk-version>
+    <id>edu.muohio.cse383.f12.mumas</id>
+    <name>MUMAS</name>
+    <version>1.0</version>
+    <publisher>batesokr</publisher>
+    <url>http://</url>
+    <description>Miami University Metro Alert System (MUMAS). </description>
+    <copyright>2012 by batesokr</copyright>
+    <icon>red-clock-icon.png</icon>
+    <persistent-wifi>false</persistent-wifi>
+    <prerendered-icon>false</prerendered-icon>
+    <statusbar-style>default</statusbar-style>
+    <statusbar-hidden>false</statusbar-hidden>
+    <fullscreen>false</fullscreen>
+    <navbar-hidden>false</navbar-hidden>
+    <analytics>true</analytics>
+    <guid>2782cf34-259a-43a8-9a37-8b3162867201</guid>
+    <property name="ti.ui.defaultunit">system</property>
+    <iphone>
+        <orientations device="iphone">
+            <orientation>Ti.UI.PORTRAIT</orientation>
+        </orientations>
+        <orientations device="ipad">
+            <orientation>Ti.UI.PORTRAIT</orientation>
+            <orientation>Ti.UI.UPSIDE_PORTRAIT</orientation>
+            <orientation>Ti.UI.LANDSCAPE_LEFT</orientation>
+            <orientation>Ti.UI.LANDSCAPE_RIGHT</orientation>
+        </orientations>
+    </iphone>
+    <android xmlns:android="http://schemas.android.com/apk/res/android"/>
+    <mobileweb>
+        <precache/>
+        <splash>
+            <enabled>true</enabled>
+            <inline-css-images>true</inline-css-images>
+        </splash>
+        <theme>default</theme>
+    </mobileweb>
+    <modules>
+        <module platform="commonjs" version="2.3.0">ti.cloud</module>
+    </modules>
+</ti:app>

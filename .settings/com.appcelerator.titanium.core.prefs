@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+provisioning_profiles/development/0BF3B84E-6A23-4349-A732-79BF6B306712/appid=edu.muohio.cse383.f12.*
+provisioning_profiles/development/0BF3B84E-6A23-4349-A732-79BF6B306712/filepath=/Users/greinedt/Library/MobileDevice/Provisioning Profiles/0BF3B84E-6A23-4349-A732-79BF6B306712.mobileprovision
+provisioning_profiles/development/0BF3B84E-6A23-4349-A732-79BF6B306712/name=CSE 383 F12
+provisioning_profiles/development/0BF3B84E-6A23-4349-A732-79BF6B306712/uuid=0BF3B84E-6A23-4349-A732-79BF6B306712
+provisioning_profiles/development/A5C4BA83-2226-453D-BF65-FBE56FE95F9E/appid=edu.muohio.cse383.f12.*
+provisioning_profiles/development/A5C4BA83-2226-453D-BF65-FBE56FE95F9E/filepath=/Users/greinedt/Library/MobileDevice/Provisioning Profiles/A5C4BA83-2226-453D-BF65-FBE56FE95F9E.mobileprovision
+provisioning_profiles/development/A5C4BA83-2226-453D-BF65-FBE56FE95F9E/name=CSE 383 F12
+provisioning_profiles/development/A5C4BA83-2226-453D-BF65-FBE56FE95F9E/uuid=A5C4BA83-2226-453D-BF65-FBE56FE95F9E
+provisioning_profiles/development/D86D5152-2E4D-4F1E-AC73-D4FDD8DB5731/appid=edu.muohio.cse383.f12.mypush
+provisioning_profiles/development/D86D5152-2E4D-4F1E-AC73-D4FDD8DB5731/filepath=/Users/greinedt/Library/MobileDevice/Provisioning Profiles/D86D5152-2E4D-4F1E-AC73-D4FDD8DB5731.mobileprovision
+provisioning_profiles/development/D86D5152-2E4D-4F1E-AC73-D4FDD8DB5731/name=CSE 383 Push
+provisioning_profiles/development/D86D5152-2E4D-4F1E-AC73-D4FDD8DB5731/uuid=D86D5152-2E4D-4F1E-AC73-D4FDD8DB5731
