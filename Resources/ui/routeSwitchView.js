@@ -223,26 +223,26 @@ SwitchView.disableFavorites = function(){
 
 SwitchView.updateBuses = function(){
 	var db = Ti.Database.open(METRO_DB);
-	if(!redSwitch.getBackgroundColor() === "gray") 			updateBus("RED");
-	else if(!blueSwitch.getBackgroundColor() === "gray") 	updateBus("BLUE");
-	else if(!greenSwitch.getBackgroundColor() == "gray") 	updateBus("GREEN");
-	else if(!orangeSwitch.getBackgroundColor() == "gray") 	updateBus("ORANGE");
-	else if(!yellowSwitch.getBackgroundColor() == "gray") 	updateBus("YELLOW");
-	else if(!purpleSwitch.getBackgroundColor() == "gray") 	updateBus("PURPLE");
+	if(!(redSwitch.getBackgroundColor() === "gray")) 			updateBus("RED");
+	else if(!(blueSwitch.getBackgroundColor() === "gray")) 		updateBus("BLUE");
+	else if(!(greenSwitch.getBackgroundColor() == "gray")) 		updateBus("GREEN");
+	else if(!(orangeSwitch.getBackgroundColor() == "gray")) 	updateBus("ORANGE");
+	else if(!(yellowSwitch.getBackgroundColor() == "gray")) 	updateBus("YELLOW");
+	else if(!(purpleSwitch.getBackgroundColor() == "gray")) 	updateBus("PURPLE");
 	db.close()
 	
 	function updateBus(color){
 		var bus = db.execute("SELECT * FROM BUS WHERE name LIKE '"+color+"%';");
 		while(bus.isValidRow()) {
 			Ti.App.mapview.removeAnnotation(bus.fieldByName("name"));	
-			if(bus.fieldByName("latitude") === null) break;
+			//if(bus.fieldByName("latitude") === null) break;
 			Ti.App.mapview.addAnnotation(Ti.Map.createAnnotation({
-				title: bus.fieldByName("name"),
-				//subtitle: bus.fieldByName("direction"),
-				pincolor: 'black',
-				latitude: bus.fieldByName("latitude"),
-				longitude: bus.fieldByName("longitude")
-			}))
+				title : bus.fieldByName("name"),
+				image : "images/buses/bus_"+color+".png",
+				pincolor : 'black',
+				latitude : bus.fieldByName("latitude"),
+				longitude : bus.fieldByName("longitude")
+			}));
 			bus.next();
 		}
 	}
@@ -276,17 +276,14 @@ SwitchView.getBusLocations = function(bus) {
 		// function called when the response data is available
 		onload : function(e) {
 			var pois = JSON.parse(client.responseText);
-			// PROBLEM 		- some routes not fully implemented (i.e. pois.data.entry.status is null)
-			// null 	 	: PURPLE2, YELLOW1, RED3, BLUE2, RED1, YELLOW2, PURPLE1, GREEN2
-			// not null 	: ORANGE, GREEN1, BLUE1, RED1, RED2
 			var status = pois.data.entry.status;
-			if(status != null) {
+			//if(status != null) {
 				latitude = pois.data.entry.status.position.lat;
 				longitude = pois.data.entry.status.position.lon;
 				var db = Ti.Database.open(METRO_DB);
 				db.execute("UPDATE BUS SET latitude = " + latitude + ", longitude = " + longitude + " WHERE name = '"+bus+"';");
 				db.close();
-			}
+			//}
 		},
 		// function called when an error occurs, including a timeout
 		onerror : function(e) {

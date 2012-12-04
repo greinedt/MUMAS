@@ -9,7 +9,7 @@ Logfile initialized
 [DEBUG] edu.muohio.cse383.f12.mumas installed? False
 [INFO] Copying CommonJS modules...
 [INFO] Copying project resources..
-[TRACE] COPYING MODIFIED FILE: C:\Users\Dave\My Documents\Titanium_Studio_Workspace\MUMAS4\Resources\ui\routeTickerSettingsView.js => C:\Users\Dave\My Documents\Titanium_Studio_Workspace\MUMAS4\build\android\bin\assets\Resources\ui\routeTickerSettingsView.js
+[TRACE] COPYING MODIFIED FILE: C:\Users\Dave\My Documents\Titanium_Studio_Workspace\MUMAS4\Resources\ui\routeSwitchView.js => C:\Users\Dave\My Documents\Titanium_Studio_Workspace\MUMAS4\build\android\bin\assets\Resources\ui\routeSwitchView.js
 [TRACE] Generating Java Classes
 [DEBUG] Processing Android resource drawables
 [DEBUG] copying app icon: C:\Users\Dave\My Documents\Titanium_Studio_Workspace\MUMAS4\build\android\bin\assets\Resources\red-clock-icon.png

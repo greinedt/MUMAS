@@ -12,9 +12,6 @@ var myLon = 0;
 
 var routeTickerSettingsView = function(width) {
 	
-	//Titanium.Database.install('/MUMASDB.sqlite', 'database');
-	//var myLat = 0;
-	//var myLon = 0;
 
 	Ti.Geolocation.purpose = "Following user";
 	Ti.Geolocation.addEventListener('location', function(e) {
@@ -178,7 +175,7 @@ function getTimes( routeColor, stop, callback ) {
 		onerror : function(e) {
 			callback(null);
 			Ti.API.debug(e.error);
-			alert(e.error);
+			//alert("ERROR HERE");
 		},
 		timeout : 5000  // in milliseconds
 	});
